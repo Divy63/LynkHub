@@ -1,11 +1,10 @@
 import React, { useState } from "react";
+import { FaHubspot } from "react-icons/fa";
+
 import {
   Container,
   Tabs,
   Tab,
-  Form,
-  Button,
-  InputGroup,
 } from "react-bootstrap";
 import "./Styles/HomePage.css"; // Import the CSS file
 import Login  from "../components/Authentication/Login";
@@ -17,16 +16,21 @@ const HomePage = () => {
   return (
     <div className="homepage-background">
       <Container className="form-container">
-        <h2 className="form-title">LynkHub</h2>
+        <h2 className="form-title">
+          LynkHub
+          <FaHubspot style={{ marginRight: "10px", color: "#F59E0B" }} />
+        </h2>
         <Tabs defaultActiveKey="login" id="auth-tabs" className="mb-3">
           {/* Login Tab */}
           <Tab eventKey="login" title="Login">
-            <Login/>{/* Rendering Login Component */}
+            <Login />
+            {/* Rendering Login Component */}
           </Tab>
 
           {/* Sign Up Tab */}
           <Tab eventKey="signup" title="Sign Up">
-            <Signup/>{/* Rendering Signup Component*/}
+            <Signup />
+            {/* Rendering Signup Component*/}
           </Tab>
         </Tabs>
       </Container>

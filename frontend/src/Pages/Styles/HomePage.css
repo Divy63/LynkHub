@@ -1,74 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
 /* Background styling */
 .homepage-background {
-    background: radial-gradient(circle, #000000, #032154);
+    background: radial-gradient(circle at center, #F59E0B, #1A1A1A);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    overflow: hidden;
 }
 
 /* Form container styling */
 .form-container {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    padding: 30px;
-    max-width: 400px;
-    z-index: 1;
+position: relative;
+        position: relative;
+            background: #000000;
+            border: 2px solid #F59E0B;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.8);
+            padding: 30px;
+            max-width: 400px;
+            z-index: 1;
+            color: #FFFFFF;
 }
 
 /* Form title styling */
 .form-title {
+font-size: 2rem;
+font-family: 'Orbitron',sans-serif;
     font-weight: bold;
-    font-size: 1.8rem;
-    color: #333333;
     text-align: center;
+    background: linear-gradient(90deg, #F59E0B, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
 }
 
 /* Custom buttons */
 .custom-login-button {
-    background-color: #05368c;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    padding: 10px 15px;
-    font-size: 1rem;
-    margin-bottom: 10px;
+    background-color: #1A1A1A;
+        color: #FFD700;
+        border: 2px solid #F59E0B;
+        border-radius: 10px;
+        font-weight: bold;
+        padding: 12px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
 }
 
 .custom-login-button:hover {
-    background-color: #032256;
+    background-color: #FFD700;
+        box-shadow: 0 6px 15px rgba(245, 158, 11, 0.7);
+        color: #1A1A1A;
+        transform: translateY(-2px);
 }
 
 .custom-guest-button {
-    background-color:#e03a4b;
-    border: none;
-    border-radius: 5px;
+    background-color:#1A1A1A;
+    color:#FFD700;
+    border: 2px solid #F59E0B;
+    border-radius: 10px;
     font-weight: bold;
-    padding: 10px 15px;
+    padding: 12px 20px;
     font-size: 1rem;
+    cursor: pointer;
+    transition:all 0.3s ease;
 }
 
 .custom-guest-button:hover {
-    background-color:  #910d0d;
+    background-color: #FFD700;
+    box-shadow: 0 6px 15px rgba(245, 158, 11, 0.7);
+    color:#1A1A1A;
+    transform: translateY(-2px);
 }
 
 .custom-signup-button {
-    background-color: #05368c;
-    border: none;
-    border-radius: 5px;
+background-color: #1A1A1A;
+    color: #FFD700;
+    border: 2px solid #F59E0B;
+    border-radius: 10px;
     font-weight: bold;
-    padding: 10px 15px;
+    padding: 12px 20px;
     font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .custom-signup-button:hover {
-    background-color: #032256;
+    background-color: #FFD700;
+        box-shadow: 0 6px 15px rgba(245, 158, 11, 0.7);
+        color: #1A1A1A;
+        transform: translateY(-2px);
 }
 
-/* Input group styling */
+.custom-show-button {
+    background-color: #1A1A1A;
+    color: #FFD700;
+    border: 2px solid #F59E0B;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.custom-show-button:hover {
+    background-color: #FFD700;
+    box-shadow: 0 6px 15px rgba(245, 158, 11, 0.7);
+    color: #1A1A1A;
+}
+
 .form-control {
     border-radius: 5px;
 }
+
+/* .custom-login-button:hover,
+.custom-guest-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    transition: transform 0.2s ease-in-out;
+} */

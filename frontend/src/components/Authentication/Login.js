@@ -30,19 +30,25 @@ const Login = () => {
               required
             />
             <Button
+              className="custom-show-button"
               variant="outline-secondary"
               onClick={() => setShowPassword(!showPassword)}
             >
-              {showPassword ? <FaEyeSlash/> : <FaEye/>}
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
             </Button>
           </InputGroup>
         </Form.Group>
 
-        <Button className="custom-login-button w-100" onClick={submitLogin}>
+        <Button
+          className="custom-login-button w-100"
+          variant="outline-secondary"
+          onClick={submitLogin}
+        >
           Login
         </Button>
         <Button
           className="custom-guest-button w-100 mt-2"
+          variant="outline-secondary"
           onClick={() => {
             // handle guest login
             setEmail("guest@lynkhub.com");
