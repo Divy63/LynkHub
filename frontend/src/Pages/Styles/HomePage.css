@@ -1,0 +1,74 @@
+/* Background styling */
+.homepage-background {
+    background: radial-gradient(circle, #000000, #032154);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Form container styling */
+.form-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    max-width: 400px;
+    z-index: 1;
+}
+
+/* Form title styling */
+.form-title {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Custom buttons */
+.custom-login-button {
+    background-color: #05368c;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px 15px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.custom-login-button:hover {
+    background-color: #032256;
+}
+
+.custom-guest-button {
+    background-color:#e03a4b;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px 15px;
+    font-size: 1rem;
+}
+
+.custom-guest-button:hover {
+    background-color:  #910d0d;
+}
+
+.custom-signup-button {
+    background-color: #05368c;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px 15px;
+    font-size: 1rem;
+}
+
+.custom-signup-button:hover {
+    background-color: #032256;
+}
+
+/* Input group styling */
+.form-control {
+    border-radius: 5px;
+}

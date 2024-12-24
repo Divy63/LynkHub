@@ -10,6 +10,7 @@
   "author": "Divy Patel",
   "license": "ISC",
   "dependencies": {
+    "colors": "^1.4.0",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "framer-motion": "^11.15.0",

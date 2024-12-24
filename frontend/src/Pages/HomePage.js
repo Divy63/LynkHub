@@ -1,18 +1,36 @@
-import React from "react";
-import Container from "react-bootstrap/Container";
-import { Avatar } from "@ark-ui/react/avatar";
-
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import React, { useState } from "react";
+import {
+  Container,
+  Tabs,
+  Tab,
+  Form,
+  Button,
+  InputGroup,
+} from "react-bootstrap";
+import "./Styles/HomePage.css"; // Import the CSS file
+import Login  from "../components/Authentication/Login";
+import Signup from "../components/Authentication/Signup";
 
 const HomePage = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
   return (
-    <Container fluid="xl" centerContent>
-      <Avatar.Root>
-        {/* <Avatar.Fallback>PA</Avatar.Fallback> */}
-        <Avatar.Image src="https://github.com/Divy63/LynkHub/blob/main/frontend/src/Images/LynkHubLogo.webp" />
-      </Avatar.Root>
-    </Container>
+    <div className="homepage-background">
+      <Container className="form-container">
+        <h2 className="form-title">LynkHub</h2>
+        <Tabs defaultActiveKey="login" id="auth-tabs" className="mb-3">
+          {/* Login Tab */}
+          <Tab eventKey="login" title="Login">
+            <Login/>{/* Rendering Login Component */}
+          </Tab>
+
+          {/* Sign Up Tab */}
+          <Tab eventKey="signup" title="Sign Up">
+            <Signup/>{/* Rendering Signup Component*/}
+          </Tab>
+        </Tabs>
+      </Container>
+    </div>
   );
 };
 
