@@ -11,7 +11,7 @@ const Login = () => {
     return (
       <Form>
         <Form.Group className="mb-3" controlId="formEmail">
-          <Form.Label>Email Address *</Form.Label>
+          <Form.Label className="custom-label">Email Address *</Form.Label>
           <Form.Control
             type="email"
             placeholder="Enter your email address"
@@ -21,9 +21,9 @@ const Login = () => {
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formPassword">
-          <Form.Label>Password *</Form.Label>
+          <Form.Label className="custom-label">Password *</Form.Label>
           <InputGroup>
-            <Form.Control
+            <Form.Control 
               type={showPassword ? "text" : "password"}
               placeholder="Enter password"
               onChange={(event) => setPassword(event.target.value)}

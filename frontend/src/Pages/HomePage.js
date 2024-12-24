@@ -22,13 +22,13 @@ const HomePage = () => {
         </h2>
         <Tabs defaultActiveKey="login" id="auth-tabs" className="mb-3">
           {/* Login Tab */}
-          <Tab eventKey="login" title="Login">
+          <Tab className="custom-label" eventKey="login" title="Login">
             <Login />
             {/* Rendering Login Component */}
           </Tab>
 
           {/* Sign Up Tab */}
-          <Tab eventKey="signup" title="Sign Up">
+          <Tab className="custom-label" eventKey="signup" title="Sign Up">
             <Signup />
             {/* Rendering Signup Component*/}
           </Tab>

@@ -39,7 +39,7 @@ font-family: 'Orbitron',sans-serif;
 /* Custom buttons */
 .custom-login-button {
     background-color: #1A1A1A;
-        color: #FFD700;
+        color: #F59E0B;
         border: 2px solid #F59E0B;
         border-radius: 10px;
         font-weight: bold;
@@ -50,7 +50,7 @@ font-family: 'Orbitron',sans-serif;
 }
 
 .custom-login-button:hover {
-    background-color: #FFD700;
+    background-color: #F59E0B;
         box-shadow: 0 6px 15px rgba(245, 158, 11, 0.7);
         color: #1A1A1A;
         transform: translateY(-2px);
@@ -58,7 +58,7 @@ font-family: 'Orbitron',sans-serif;
 
 .custom-guest-button {
     background-color:#1A1A1A;
-    color:#FFD700;
+    color:#F59E0B;
     border: 2px solid #F59E0B;
     border-radius: 10px;
     font-weight: bold;
@@ -69,7 +69,7 @@ font-family: 'Orbitron',sans-serif;
 }
 
 .custom-guest-button:hover {
-    background-color: #FFD700;
+    background-color: #F59E0B;
     box-shadow: 0 6px 15px rgba(245, 158, 11, 0.7);
     color:#1A1A1A;
     transform: translateY(-2px);
@@ -77,7 +77,7 @@ font-family: 'Orbitron',sans-serif;
 
 .custom-signup-button {
 background-color: #1A1A1A;
-    color: #FFD700;
+    color: #F59E0B;
     border: 2px solid #F59E0B;
     border-radius: 10px;
     font-weight: bold;
@@ -88,7 +88,7 @@ background-color: #1A1A1A;
 }
 
 .custom-signup-button:hover {
-    background-color: #FFD700;
+    background-color: #F59E0B;
         box-shadow: 0 6px 15px rgba(245, 158, 11, 0.7);
         color: #1A1A1A;
         transform: translateY(-2px);
@@ -96,7 +96,7 @@ background-color: #1A1A1A;
 
 .custom-show-button {
     background-color: #1A1A1A;
-    color: #FFD700;
+    color: #F59E0B;
     border: 2px solid #F59E0B;
     border-radius: 10px;
     font-weight: bold;
@@ -107,13 +107,20 @@ background-color: #1A1A1A;
 }
 
 .custom-show-button:hover {
-    background-color: #FFD700;
+    background-color: #F59E0B;
     box-shadow: 0 6px 15px rgba(245, 158, 11, 0.7);
     color: #1A1A1A;
 }
 
 .form-control {
     border-radius: 5px;
+}
+
+.custom-label {
+    color: #F59E0B;
+    /* Gold color */
+    font-weight: bold;
+    font-size: 1rem;
 }
 
 /* .custom-login-button:hover,

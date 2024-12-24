@@ -17,7 +17,7 @@ const Signup = () => {
   return (
     <Form>
       <Form.Group className="mb-3" controlId="formName">
-        <Form.Label>Name *</Form.Label>
+        <Form.Label className="custom-label">Name *</Form.Label>
         <Form.Control
           id="first-name"
           type="text"
@@ -28,7 +28,7 @@ const Signup = () => {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formEmail">
-        <Form.Label>Email Address *</Form.Label>
+        <Form.Label className="custom-label">Email Address *</Form.Label>
         <Form.Control
           type="email"
           placeholder="Enter your email address"
@@ -38,7 +38,7 @@ const Signup = () => {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formPassword">
-        <Form.Label>Password *</Form.Label>
+        <Form.Label className="custom-label">Password *</Form.Label>
         <InputGroup>
           <Form.Control
             type={showPassword ? "text" : "password"}
@@ -57,7 +57,7 @@ const Signup = () => {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formConfirmPassword">
-        <Form.Label>Confirm Password *</Form.Label>
+        <Form.Label className="custom-label">Confirm Password *</Form.Label>
         <InputGroup>
           <Form.Control
             type="password"
@@ -76,7 +76,7 @@ const Signup = () => {
       </Form.Group>
 
       <Form.Group controlId="profile" className="mb-3">
-        <Form.Label>Profile Picture</Form.Label>
+        <Form.Label className="custom-label">Profile Picture</Form.Label>
         <Form.Control
           type="file"
           accept="image/*"
