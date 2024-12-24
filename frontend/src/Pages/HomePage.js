@@ -1,13 +1,19 @@
-import React from 'react'
-import { Button } from 'react-bootstrap'
+import React from "react";
+import Container from "react-bootstrap/Container";
+import { Avatar } from "@ark-ui/react/avatar";
+
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 const HomePage = () => {
   return (
-    <div>
-      Home
-      <Button>Click Me</Button>
-    </div>
-  )
-}
+    <Container fluid="xl" centerContent>
+      <Avatar.Root>
+        {/* <Avatar.Fallback>PA</Avatar.Fallback> */}
+        <Avatar.Image src="https://github.com/Divy63/LynkHub/blob/main/frontend/src/Images/LynkHubLogo.webp" />
+      </Avatar.Root>
+    </Container>
+  );
+};
 
-export default HomePage
+export default HomePage;
