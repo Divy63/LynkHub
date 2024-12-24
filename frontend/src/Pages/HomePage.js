@@ -18,17 +18,17 @@ const HomePage = () => {
       <Container className="form-container">
         <h2 className="form-title">
           LynkHub
-          <FaHubspot style={{ marginRight: "10px", color: "#F59E0B" }} />
+          <FaHubspot style={{ marginRight: "10px", color: "#FFD700" }} />
         </h2>
-        <Tabs defaultActiveKey="login" id="auth-tabs" className="mb-3">
+        <Tabs className="custom-tabs" defaultActiveKey="login" id="auth-tabs">
           {/* Login Tab */}
-          <Tab className="custom-label" eventKey="login" title="Login">
+          <Tab eventKey="login" title="Login">
             <Login />
             {/* Rendering Login Component */}
           </Tab>
 
           {/* Sign Up Tab */}
-          <Tab className="custom-label" eventKey="signup" title="Sign Up">
+          <Tab eventKey="signup" title="Sign Up">
             <Signup />
             {/* Rendering Signup Component*/}
           </Tab>
