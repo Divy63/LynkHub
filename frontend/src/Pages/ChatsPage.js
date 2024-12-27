@@ -1,6 +1,4 @@
-import React, { useEffect,useState
-
- } from "react";
+import React, { useEffect,useState } from "react";
 import axios from "axios";
 
 const ChatsPage = () => {
@@ -8,7 +6,7 @@ const ChatsPage = () => {
   const [chats,setChats]=useState([]);
   const getChats = async () => {
     try {
-      const { data } = await axios.get("/api/chats");
+      const { data } = await axios.get("/api/chat");
       setChats(data);
     } catch (error) {
       console.error("Error fetching chats:", error);

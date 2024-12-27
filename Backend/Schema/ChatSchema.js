@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const { default: ChatsPage } = require("../../../frontend/src/Pages/ChatsPage");
 
 const chatSchema = mongoose.Schema({
   chatName: { type: String, trim: true },
@@ -21,4 +20,4 @@ const chatSchema = mongoose.Schema({
 },{timestamps:true});
 
 const Chats=mongoose.model("Chats",chatSchema)
-module.exports=ChatsPage
+module.exports=Chats

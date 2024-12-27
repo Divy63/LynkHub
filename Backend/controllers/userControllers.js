@@ -54,4 +54,21 @@ const authenticateUser=asyncHandler(async(req,res)=>{
     }
 });
 
-module.exports = { registerUser, authenticateUser };
+// /api/user?search=xyz
+const allUsers=asyncHandler(async(req,res)=>{
+    
+    // Search Query
+    const searchName=req.query.search ? {
+        $or:[
+            {name :{ $regex: req.query.search,$options:"i"}},
+            {email :{ $regex: req.query.search,$options:"i"}},
+        ]
+    }:{};
+
+    // Quering the database to get results of users by name or email
+    const users=await User.find(searchName).find({ _id :{$ne:req.user._id}});
+    res.send(users);
+});
+
+
+module.exports = { registerUser, authenticateUser , allUsers };

@@ -5,11 +5,13 @@ const connectDatabase = require("./config/db");
 const colors=require("colors");
 const userRoutes=require('./routes/userRoutes');
 const {notFound,errorHandler}=require('./middleware/errorMiddleWare');
+const chatRoutes=require("./routes/chatRoutes");
+const cors=require("cors");
 
 dotenv.config();
 connectDatabase();
 const app = express();
-
+app.use(cors());
 // Accepts JSON Data
 app.use(express.json());
 
@@ -21,10 +23,10 @@ app.get(`/`, (request, response) => {
   response.send("API is Running Successfully");
 });
 
-app.use("/api/user",userRoutes)
-
-app.use(notFound)
-app.use(errorHandler)
+app.use("/api/user",userRoutes);
+app.use("/api/chat",chatRoutes);
+app.use(notFound);
+app.use(errorHandler);
 
 // // GET API to get all chats
 // app.get(`/api/chats`, (request, response) => {

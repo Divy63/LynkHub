@@ -1,4 +1,4 @@
-const mongoose=require('mongoose')
+const mongoose=require('mongoose');
 
 const messageSchema=mongoose.Schema(
     {
@@ -11,4 +11,4 @@ const messageSchema=mongoose.Schema(
 );
 
 const message=mongoose.model("Messages",messageSchema);
-module.exports=Messages;
+module.exports=message;
