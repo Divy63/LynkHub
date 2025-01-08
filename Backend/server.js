@@ -2,11 +2,12 @@ const express = require("express");
 const chats = require("./data/data");
 const dotenv = require("dotenv");
 const connectDatabase = require("./config/db");
-const colors=require("colors");
-const userRoutes=require('./routes/userRoutes');
-const {notFound,errorHandler}=require('./middleware/errorMiddleWare');
-const chatRoutes=require("./routes/chatRoutes");
-const cors=require("cors");
+const colors = require("colors");
+const userRoutes = require("./routes/userRoutes");
+const { notFound, errorHandler } = require("./middleware/errorMiddleWare");
+const chatRoutes = require("./routes/chatRoutes");
+const cors = require("cors");
+const messageRoutes = require("./routes/messageRoutes");
 
 dotenv.config();
 connectDatabase();
@@ -23,25 +24,56 @@ app.get(`/`, (request, response) => {
   response.send("API is Running Successfully");
 });
 
-app.use("/api/user",userRoutes);
-app.use("/api/chat",chatRoutes);
+app.use("/api/user", userRoutes);
+app.use("/api/chat", chatRoutes);
+app.use("/api/message", messageRoutes);
 app.use(notFound);
 app.use(errorHandler);
 
-// // GET API to get all chats
-// app.get(`/api/chats`, (request, response) => {
-//   response.send(chats);
-// });
+const server = app.listen(
+  10000,
+  console.log(`Server started on PORT ${PORT}`.yellow)
+);
 
-// // GET API to get a single chat
-// app.get("/api/chats/:id", (request, response) => {
-//   // console.log(request.params.id);
-//   const chat = chats.find((chat) => chat._id === request.params.id);
-//   if (!chat) {
-//     response.status(404).send({ message: "Chat not found" });
-//   }
-//   response.send(chat);
-// });
+const io = require("socket.io")(server, {
+  pingTimeout: 60000,
+  cors: {
+    origin: "http://localhost:3001",
+  },
+});
 
-// Starting Server
-app.listen(PORT, console.log(`Server started on Port:${PORT}`.yellow.bold));
+io.on("connection", (socket) => {
+  console.log("Connected to socket.io");
+
+  socket.on("setup", (userData) => {
+    socket.join(userData._id);
+    console.log(userData._id);
+    socket.emit("connected");
+  });
+
+  socket.on("join chat", (room) => {
+    socket.join(room);
+    console.log("User Joined Room:"+room)
+  });
+
+  socket.on('typing',(room)=>socket.in(room).emit('typing'));
+  socket.on("stop typing", (room) => socket.in(room).emit("stop typing"));
+
+  socket.on('new message',(newMessageRecieved)=>{
+    var chat = newMessageRecieved.chat;
+    if(!chat.users) return console.log("Chat.users not defined");
+    chat.users.forEach(user=>{
+      if(user._id==newMessageRecieved.sender._id){
+        return;
+
+      }else{
+
+      }socket.in(user._id).emit("message recieved",newMessageRecieved);
+    });
+  });
+
+  socket.off("setup",()=>{
+    console.log("USER DISCONNECTED");
+  });
+  
+});

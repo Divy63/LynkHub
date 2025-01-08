@@ -5,8 +5,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState("");
@@ -53,6 +53,7 @@ const Login = () => {
           <Form.Control
             className="custom-input"
             type="email"
+            value={email}
             placeholder="Enter your email address"
             onChange={(event) => setEmail(event.target.value.trim())}
             required
@@ -66,6 +67,7 @@ const Login = () => {
               className="custom-input"
               type={showPassword ? "text" : "password"}
               placeholder="Enter password"
+              value={password}
               onChange={(event) => setPassword(event.target.value.trim())}
               required
             />

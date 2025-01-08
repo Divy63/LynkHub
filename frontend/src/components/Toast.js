@@ -1,8 +1,6 @@
-import React from 'react'
+import React from "react";
 
-const Toast = () => {
-
-   
+const Toast = (toastMessage,showToast,setShowToast) => {
   return (
     <Toast
       show={showToast}
@@ -14,6 +12,6 @@ const Toast = () => {
       <Toast.Body>{toastMessage}</Toast.Body>
     </Toast>
   );
-}
+};
 
-export default Toast
+export default Toast;

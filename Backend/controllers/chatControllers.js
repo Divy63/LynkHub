@@ -22,7 +22,7 @@ const accessChat = asyncHandler(async (req, res) => {
 
   isChat = await User.populate(isChat, {
     path: "mostRecentMessage.sender",
-    select: "name profile email",
+    select: "name email profile",
   });
 
   // Getting only 1 chat
@@ -60,7 +60,7 @@ const getChats = asyncHandler(async (req, res) => {
       .then(async (results) => {
         results = await User.populate(results, {
           path: "mostRecentMessage.sender",
-          select: "name profile email",
+          select: "name email profile",
         });
 
         res.status(200).send(results);

@@ -2,7 +2,7 @@
 
 /* Background styling */
 .homepage-background {
-    background: radial-gradient(circle at center, #FFD700, #1A1A1A);
+    background: radial-gradient(circle at center, var(--soft-taupe), var(--warm-sand));
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -12,17 +12,17 @@
 
 /* Form container styling */
 .form-container {
-    background: #000000;
+    background: var(--off-white);
     /* Black background */
-    border: 2px solid #FFD700;
+    border: 2px solid var(--soft-taupe);
     /* Gold border */
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+    box-shadow: 0 0 20px var(--blush-pink);
     /* Gold glow */
     padding: 30px;
     max-width: 400px;
     z-index: 1;
-    color: #FFFFFF;
+    color: var(--soft-taupe);
     /* White text */
 }
 
@@ -32,7 +32,7 @@
     font-family: 'Orbitron', sans-serif;
     font-weight: bold;
     text-align: center;
-    background: linear-gradient(90deg, #FFD700, #FFD700);
+    background: linear-gradient(90deg, #C1A57B, #C1A57B);
     /* Consistent gold */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -43,11 +43,11 @@
 .custom-login-button,
 .custom-guest-button,
 .custom-signup-button {
-    background-color: #1A1A1A;
+    background-color: #F3E8DC;
     /* Dark background */
-    color: #FFD700;
+    color: #C1A57B;
     /* Gold text */
-    border: 2px solid #FFD700;
+    border: 2px solid #C1A57B;
     /* Gold border */
     border-radius: 10px;
     /* Rounded corners */
@@ -61,11 +61,11 @@
 .custom-login-button:hover,
 .custom-guest-button:hover,
 .custom-signup-button:hover {
-    background-color: #FFD700;
+    background-color: #C1A57B;
     /* Gold background */
-    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.7);
+    box-shadow: 0 6px 15px var(--blush-pink);
     /* Subtle gold glow */
-    color: #1A1A1A;
+    color: #F3E8DC;
     /* Black text */
     transform: translateY(-2px);
     /* Slight lift */
@@ -73,10 +73,10 @@
 
 /* Show/Hide button styling */
 .custom-show-button {
-    background-color: #1A1A1A;
-    color: #FFD700;
+    background-color: #F3E8DC;
+    color: #C1A57B;
     /* Gold text */
-    border: 2px solid #FFD700;
+    border: 2px solid #C1A57B;
     /* Gold border */
     border-radius: 10px;
     font-weight: bold;
@@ -87,21 +87,20 @@
 }
 
 .custom-show-button:hover {
-    background-color: #FFD700;
+    background-color: #C1A57B;
     /* Gold background */
-    color: #1A1A1A;
+    color: #F3E8DC;
     /* Black text */
-    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.7);
-    /* Subtle gold glow */
+box-shadow: 0 6px 15px rgba(193, 165, 123, 0.5);    /* Subtle gold glow */
 }
 
 /* Input fields styling */
 .custom-input {
-    background-color: #1A1A1A;
+    background-color: #F3E8DC;
     /* Dark background */
-    color: #FFD700;
+    color: #C1A57B;
     /* Gold text */
-    border: 2px solid #FFD700;
+    border: 2px solid #C1A57B;
     /* Gold border */
     border-radius: 8px;
     /* Rounded corners */
@@ -111,7 +110,7 @@
 }
 
 .custom-input:focus {
-    border-color: #FFD700;
+    border-color: #C1A57B;
     /* Gold focus border */
     box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
     /* Subtle gold glow */
@@ -120,7 +119,7 @@
 }
 
 .custom-input::placeholder {
-    color: #FFD700;
+    color: #C1A57B;
     /* Gold placeholder text */
     font-style: italic;
     opacity: 0.7;
@@ -129,7 +128,7 @@
 
 /* Label styling */
 .custom-label {
-    color: #FFD700;
+    color: #C1A57B;
     /* Gold color */
     font-weight: bold;
     font-size: 1rem;
@@ -137,7 +136,7 @@
 
 /* Tab container styling */
 .custom-tabs .nav-tabs {
-    border-bottom: 2px solid #FFD700;
+    border-bottom: 2px solid #C1A57B;
     /* Gold underline */
     justify-content: center;
     /* Center align tabs */
@@ -145,15 +144,15 @@
 
 /* Tab container styling */
 .custom-tabs .nav-tabs {
-    border-bottom: 2px solid #FFD700;
+    border-bottom: 2px solid #C1A57B;
     /* Gold underline */
     justify-content: center;
     /* Center align tabs */
 }
 
 .custom-tabs .nav-link {
-    background-color: #000000;
-    color: #FFD700;
+    background-color: #F3E8DC;
+    color: #C1A57B;
     font-weight: bold;
     border: 2px solid transparent;
     border-radius: 8px;
@@ -163,25 +162,25 @@
 
 /* Hover effect on unselected tabs */
 .custom-tabs .nav-link:hover {
-    background-color: #000000;
-    color: #FFD700;
-    border-color: #FFD700;
+    background-color: #F3E8DC;
+    color: #C1A57B;
+    border-color: #C1A57B;
 }
 
 /* Active tab styling */
 .custom-tabs .nav-link.active {
-    background-color: #000000;
-    color: #FFD700;
-    border-color: #FFD700;
+    background-color: #F3E8DC;
+    color: #C1A57B;
+    border-color: #C1A57B;
 }
 
 .custom-toast {
-    background-color: #1A1A1A;
+    background-color: #F3E8DC;
     /* Dark background */
-    border: 2px solid #FFD700;
+    border: 2px solid #C1A57B;
     /* Gold border */
     border-radius: 8px;
-    color: #FFD700;
+    color: #C1A57B;
     /* Gold text */
     font-weight: bold;
     font-size: 0.9rem;

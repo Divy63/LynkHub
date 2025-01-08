@@ -3,7 +3,6 @@ import Form from "react-bootstrap/Form";
 import { Toast } from "react-bootstrap";
 import { InputGroup, Button } from "react-bootstrap";
 import { FaEye, FaEyeSlash } from "react-icons/fa"; // Import icons
-import { header } from "framer-motion/client";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 const Signup = () => {
