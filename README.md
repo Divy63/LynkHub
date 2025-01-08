@@ -84,4 +84,5 @@ This project is free to use under the MIT License.
 ## Contact
 
 GitHub: https://github.com/Divy63/
+
 Email: divyp630@gmail.com
