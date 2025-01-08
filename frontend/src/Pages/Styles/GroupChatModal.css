@@ -1,0 +1,76 @@
+.btn-sm {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+}
+
+.custom-leave-btn {
+    background-color: #C1A57B;
+    /* Soft Taupe */
+    color: #FAF7F2;
+    /* Off-White text for better contrast */
+    border: none;
+    /* Remove border */
+    font-weight: bold;
+    /* Make text bold */
+    border-radius: 4px;
+    /* Slightly rounded edges for a modern look */
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth hover transition */
+}
+
+.custom-leave-btn:hover {
+    background-color: #A98662;
+    /* Slightly darker Soft Taupe */
+    color: #F3E8DC;
+    /* Warm Sand for hover text */
+}
+
+/* Styling for the input box */
+.form-control {
+    background-color: #F3E8DC;
+    /* Warm Sand */
+    color: #8E8E93;
+    /* Slate Gray text */
+    border: 2px solid #C1A57B;
+    /* Soft Taupe border */
+    border-radius: 4px;
+    /* Rounded corners */
+    transition: border-color 0.3s, background-color 0.3s;
+    /* Smooth focus effect */
+}
+
+/* Placeholder styling */
+.form-control::placeholder {
+    color: #8E8E93;
+    /* Slate Gray for placeholder text */
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* Remove glow effect on focus */
+.form-control:focus {
+    background-color: #FAF7F2;
+    /* Off-White for focus */
+    color: #8E8E93;
+    /* Slate Gray text */
+    border: 2px solid #C1A57B;
+    /* Highlighted Soft Taupe border */
+    box-shadow: none;
+    /* Remove default glow */
+}
+
+.form-label {
+    color: #8E8E93;
+    /* Slate Gray */
+    font-weight: bold;
+    /* Keep the label bold */
+}
+
+.modal-title-golden {
+    color: #C1A57B;
+    /* Soft Taupe */
+    font-weight: bold;
+    /* Keep it bold */
+    text-align: center;
+    /* Center align for a cleaner look */
+}
