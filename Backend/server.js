@@ -8,6 +8,7 @@ const { notFound, errorHandler } = require("./middleware/errorMiddleWare");
 const chatRoutes = require("./routes/chatRoutes");
 const cors = require("cors");
 const messageRoutes = require("./routes/messageRoutes");
+const path = require("path");
 
 dotenv.config();
 connectDatabase();
@@ -19,15 +20,25 @@ app.use(express.json());
 // Port on which the server runs
 const PORT = process.env.PORT || 10000;
 
-// Get API to get the home page
-app.get(`/`, (request, response) => {
-  response.send("API is Running Successfully");
-});
-
 app.use("/api/user", userRoutes);
 app.use("/api/chat", chatRoutes);
 app.use("/api/message", messageRoutes);
-app.use(notFound);
+// <-----------------------------------------------Deployemt------------------------------------------------------------------------>
+const __dirname1 =path.resolve();
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname1, "frontend","build")));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname1, "frontend", "build", "index.html"));
+  });
+} else {
+  app.get("/", (req, res) => {
+    res.send("API is Running Successfully.");
+  });
+}
+  // <-----------------------------------------------Deployemt------------------------------------------------------------------------>
+
+
+  app.use(notFound);
 app.use(errorHandler);
 
 const server = app.listen(
