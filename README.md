@@ -31,41 +31,41 @@ LynkHub is a chat app where people can talk to each other in real time. You can 
    git clone https://github.com/Divy63/LynkHub.git
    cd LynkHub
    ```
-2. **Backend Setup**
+**Backend Setup**
 
-  1. **Go to Backend Folder**
+3. **Go to Backend Folder**
      ```bash
      cd backend
      ```
-  2. **Install Dependencies**
+4. **Install Dependencies**
      ```bash
      npm install
      ```
-  3. **Create a file called .env if not already present**
+5. **Create a file called .env if not already present**
      ```env
      PORT=10000
      MONGO_URI=mongodb+srv://divyp630:Divy%406303@cluster0.shy3y.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
      JWT_SECRET=lynkhub
      NODE_ENV=production
      ```
-  4. **Start the Server**
+6. **Start the Server**
      ```bash
      npm start
      ```
-3. **Frontend Setup**
-  1. **Go to Frontend Folder**
+**Frontend Setup**
+7. **Go to Frontend Folder**
      ```bash
      cd ../frontend
      ```
-  2. **Install Dependencies**
+8. **Install Dependencies**
      ```bash
      npm install
      ```
-  3. **Start the Server**
+9. **Start the Server**
      ```bash
      npm start
      ```
-4. **Open the App**
+10. **Open the App**
    ```bash
    http://localhost:10000
    ```
