@@ -150,7 +150,7 @@ const SearchResult = () => {
                 disabled={loadingChat}
                 style={{
                   borderColor: "var(--soft-taupe)",
-                  color: "var(--soft-taupe)",
+                  color: "var(--off-white)",
                 }}
               >
                 {loadingChat ? (

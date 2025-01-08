@@ -42,6 +42,7 @@ const Chats = ({ fetchAgain }) => {
     setLoggedUser(JSON.parse(localStorage.getItem("userInfo")));
     getChats();
   }, [fetchAgain]);
+  
 
   return (
     <div className="chats-container" >
